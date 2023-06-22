@@ -1,0 +1,100 @@
+@import "../utils/vars";
+
+.main-header {
+  border-bottom: $main-header-border;
+  &__flex-container {
+    display: flex;
+    align-items: baseline;
+  }
+  &__webstudio-link {
+    font-family: $logo-font;
+    color: $header-logo-color;
+    text-decoration: none;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin: 24px 93px 25px 0;
+    &--span {
+      color: $primary-color;
+    }
+  }
+}
+.navigation {
+  &__list {
+    color: $primary-text-color;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 600px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  &__item {
+    margin-right: 46px;
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  &__agency-link,
+  &__agency-link:visited {
+    color: $primary-text-color;
+  }
+  &__agency-link--underline {
+    color: $primary-color;
+    &::after {
+      content: "";
+      background-color: $primary-color;
+      display: block;
+      position: relative;
+      top: 25.5px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    }
+  }
+  &__portfolio-link,
+  &__portfolio-link:visited {
+    color: $primary-text-color;
+  }
+  &__portfolio-link--underline {
+    color: $primary-color;
+    &::after {
+      content: "";
+      background-color: $primary-color;
+      display: block;
+      position: relative;
+      top: 25.5px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    }
+  }
+  &__contact-link {
+    color: $primary-text-color;
+    margin-right: 364px;
+    &:visited {
+      color: $primary-text-color;
+    }
+  }
+}
+.contacts {
+  display: flex;
+  &__tel-link {
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  &__mail-link {
+    @extend .contacts__tel-link;
+    margin-right: 50px;
+  }
+  &__envelope-icon,
+  &__smartphone-icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

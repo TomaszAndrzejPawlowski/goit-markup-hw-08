@@ -1,0 +1,197 @@
+@import "../utils/vars";
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+}
+.backdrop {
+  display: flex;
+  background-color: #00000033;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: not-allowed;
+  transform: scale(1);
+  transition: $primary-transitions;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  background: #fff;
+  box-shadow: $modal-shadow;
+  width: 528px;
+  height: 581px;
+  cursor: auto;
+  border-radius: 4px;
+  &__close-button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: relative;
+    top: 8px;
+    left: 91%;
+    cursor: pointer;
+  }
+}
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__headline {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 12px;
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    padding-left: 40px;
+    &:focus-within .form__icon {
+      fill: $primary-color;
+    }
+    &:focus-within .form__input-border {
+      border-color: $primary-color;
+    }
+    &:focus-within .form__textarea-border {
+      border-color: $primary-color;
+    }
+  }
+  &__label-text {
+    margin-bottom: 10px;
+  }
+  &__input-border {
+    width: 448px;
+    height: 40px;
+    border: $modal-inputs-borders;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  &__icon {
+    fill: $primary-text-color;
+    margin: auto;
+  }
+
+  &__input {
+    margin: 10px auto 10px 0;
+    width: 366px;
+    height: 20px;
+    border: none;
+    outline-color: $forms-inputs-outline-colors;
+  }
+  &__textarea-label {
+    @extend .form__label;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  &__textarea-border {
+    width: 448px;
+    border: $modal-inputs-borders;
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+  }
+  &__textarea-input {
+    resize: none;
+    margin: 12px auto;
+    width: 416px;
+    border: none;
+    outline-color: $forms-inputs-outline-colors;
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      color: $textarea-placeholder-color;
+    }
+  }
+  &__declaration-label {
+    padding-left: 55px;
+  }
+  &__checkbox {
+    position: relative;
+    top: 20px;
+    width: 16px;
+    height: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    &:checked ~ .form__checkbox-checked-svg {
+      visibility: visible;
+    }
+    &:checked ~ .form__checkbox-square-svg {
+      visibility: hidden;
+    }
+  }
+  &__checkbox-square-svg {
+    position: relative;
+    left: 54px;
+  }
+  &__checkbox-checked-svg {
+    fill: #fff;
+    background-color: $primary-color;
+    width: 16px;
+    height: 17px;
+    border-radius: 4px;
+    position: relative;
+    left: 54px;
+    bottom: 19px;
+    visibility: hidden;
+  }
+  &__declaration {
+    position: relative;
+    left: 79px;
+    bottom: 42px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+  }
+  &__declaration-link {
+    color: $primary-color;
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $primary-color;
+    }
+  }
+  &__send-button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background-color: $primary-color;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 164px;
+    position: relative;
+    bottom: 20px;
+  }
+}

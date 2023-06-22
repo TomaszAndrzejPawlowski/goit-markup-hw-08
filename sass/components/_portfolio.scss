@@ -1,0 +1,98 @@
+@import "../utils/vars";
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+  &__button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: $portfolio-buttons-color;
+    border: 0;
+    margin-right: 8px;
+    padding: 6px 22px;
+    &:nth-child(5) {
+      margin: 0;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: $portfolio-selected-buttons-shadow;
+      color: #fff;
+      background-color: $primary-color;
+    }
+  }
+}
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  &__item {
+    max-height: 404px;
+    margin-bottom: 30px;
+    position: relative;
+    &:hover,
+    &:focus {
+      box-shadow: $portfolio-selected-project-shadow;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 94px;
+    }
+  }
+  &__img {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    padding: 0.5em;
+    width: 370px;
+    height: 294px;
+    background-color: $portfolio-overlays-color;
+    transform: translateY(100%);
+    transition: $primary-transitions;
+    & p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.03em;
+      color: #fff;
+      padding: 30px 24px;
+    }
+  }
+  &__section:hover .portfolio-projects__overlay,
+  &__section:focus .portfolio-projects__overlay {
+    transform: translateY(0);
+  }
+  &__texts {
+    border: $portfolio-text-under-project-border;
+    border-top: 0;
+    padding-top: 20px;
+    height: 110px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-left: 24px;
+    margin-bottom: 4px;
+  }
+  &__category {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+    margin-left: 24px;
+    margin-bottom: 20px;
+  }
+}

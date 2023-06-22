@@ -1,0 +1,66 @@
+@import "../utils/vars";
+
+.team-section {
+  width: auto;
+  background: $assets-icons-background-color;
+  padding: 94px 0;
+  &__headline {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0 0 50px;
+  }
+}
+.employee-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  &__member {
+    display: block;
+    margin-right: 30px;
+    background: #fff;
+    box-shadow: $team-member-shadow;
+    &:nth-child(4) {
+      margin-right: 0;
+    }
+  }
+  &__member-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  &__member-role {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+  }
+  &__social-links {
+    display: flex;
+    max-width: 206px;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 18px;
+  }
+  &__icons-border {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      & > .employee-list__social-icon {
+        fill: #fff;
+      }
+    }
+  }
+  &__social-icon {
+    margin: 12px;
+    fill: $employee-socials-colors;
+  }
+}
