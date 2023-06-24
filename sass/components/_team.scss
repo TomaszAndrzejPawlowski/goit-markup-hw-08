@@ -1,9 +1,8 @@
-@import "../utils/vars";
-
 .team-section {
   width: auto;
   background: $assets-icons-background-color;
   padding: 94px 0;
+
   &__headline {
     font-weight: 700;
     font-size: 36px;
@@ -15,15 +14,31 @@
 }
 .employee-list {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   justify-content: space-between;
   margin: 0;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   &__member {
     display: block;
-    margin-right: 30px;
     background: #fff;
     box-shadow: $team-member-shadow;
-    &:nth-child(4) {
-      margin-right: 0;
+    margin-bottom: 30px;
+
+    @include tablet {
+      max-width: 350px;
+    }
+
+    @include desktop {
+      margin-right: 30px;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      max-width: 265px;
     }
   }
   &__member-name {

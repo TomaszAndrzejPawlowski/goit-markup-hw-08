@@ -1,7 +1,4 @@
-@import "../utils/vars";
-
 .clients-section {
-  padding: 94px 214px;
   &__headline {
     font-size: 36px;
     font-weight: 700;
@@ -11,13 +8,15 @@
   }
   &__icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
   &__icon-background {
-    width: 170px;
+    width: 180px;
     height: 92px;
     border: $clients-icon-background;
     border-radius: 4px;
+    margin: 30px 0;
     &:focus,
     &:hover {
       border: $clients-icon-background-active;
@@ -25,27 +24,36 @@
         fill: $primary-color;
       }
     }
+
+    @include tablet {
+      width: 226px;
+    }
+
+    @include desktop {
+      width: 170px;
+    }
   }
   &__icon {
     margin: 16px 32px;
     fill: $clients-svg-colors;
+
     &--positon {
-      margin: 25px 65px 20.5px 64px;
+      margin: 12% 40%;
     }
     &--positon-1 {
-      margin: 21px 65px 20.5px 64px;
+      margin: 12% 38%;
     }
     &--positon-2 {
-      margin: 25px 64px 25px 62px;
+      margin: 14% 38%;
     }
     &--positon-3 {
-      margin: 25px 42px 26px 43px;
+      margin: 12% 34%;
     }
     &--positon-4 {
-      margin: 16px 53px 28px 54px;
+      margin: 8% 30%;
     }
     &--positon-5 {
-      margin: 22px 38px 25px 38px;
+      margin: 12% 28%;
     }
   }
 }

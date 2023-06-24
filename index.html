@@ -28,6 +28,16 @@
           <a class="main-header__webstudio-link" href="#"
             ><span class="main-header__webstudio-link--span">Web</span>Studio</a
           >
+          <button
+            type="button"
+            class="main-header__menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24px" height="16px">
+              <use href="./images/icons-svg/icons.svg#header-menu"></use>
+            </svg>
+          </button>
           <nav class="main-header__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -45,7 +55,7 @@
                 >
               </li>
               <li class="navigation__item">
-                <a class="navigation__contact-link" href="#contact">Kontakty</a>
+                <a class="navigation__contact-link" href="#contact">Kontakt</a>
               </li>
             </ul>
           </nav>
@@ -91,52 +101,68 @@
       <!--nasze atuty-->
       <div class="container">
         <section class="assets-section">
-          <ul class="assets-section__asset asset">
-            <li class="asset__item">
-              <svg class="asset__icon" width="70px" height="70px">
-                <use href="./images/icons-svg/icons.svg#icon-antenna-1"></use>
-              </svg>
+          <ul class="assets-section__assets-list assets-list">
+            <li class="assets-list__item">
+              <ul class="assets-list__asset asset">
+                <li class="asset__item">
+                  <svg class="asset__icon" width="70px" height="70px">
+                    <use
+                      href="./images/icons-svg/icons.svg#icon-antenna-1"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
+                <li class="asset__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </li>
+              </ul>
             </li>
-            <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
-            <li class="asset__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
+            <li class="assets-list__item">
+              <ul class="assets-list__asset asset">
+                <li class="asset__item">
+                  <svg class="asset__icon" width="70px" height="70px">
+                    <use href="./images/icons-svg/icons.svg#icon-clock-1"></use>
+                  </svg>
+                </li>
+                <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
+                <li class="asset__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </li>
+              </ul>
             </li>
-          </ul>
-          <ul class="assets-section__asset asset">
-            <li class="asset__item">
-              <svg class="asset__icon" width="70px" height="70px">
-                <use href="./images/icons-svg/icons.svg#icon-clock-1"></use>
-              </svg>
+            <li class="assets-list__item">
+              <ul class="assets-list__asset asset">
+                <li class="asset__item">
+                  <svg class="asset__icon" width="70px" height="70px">
+                    <use
+                      href="./images/icons-svg/icons.svg#icon-diagram-1"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
+                <li class="asset__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </li>
+              </ul>
             </li>
-            <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
-            <li class="asset__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </li>
-          </ul>
-          <ul class="assets-section__asset asset">
-            <li class="asset__item">
-              <svg class="asset__icon" width="70px" height="70px">
-                <use href="./images/icons-svg/icons.svg#icon-diagram-1"></use>
-              </svg>
-            </li>
-            <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
-            <li class="asset__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
-            </li>
-          </ul>
-          <ul class="assets-section__asset asset">
-            <li class="asset__item">
-              <svg class="asset__icon" width="70px" height="70px">
-                <use href="./images/icons-svg/icons.svg#icon-astronaut-1"></use>
-              </svg>
-            </li>
-            <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
-            <li class="asset__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-              arcu sem. Sed non sodales dui. Interdum et malesuada
+            <li class="assets-list__item">
+              <ul class="assets-list__asset asset">
+                <li class="asset__item">
+                  <svg class="asset__icon" width="70px" height="70px">
+                    <use
+                      href="./images/icons-svg/icons.svg#icon-astronaut-1"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="asset__tittle"><strong>LOREM IPSUM</strong></li>
+                <li class="asset__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -147,10 +173,12 @@
             <li class="gallery-list__item">
               <img
                 class="gallery-list__img"
-                src="images/gallery/gallery_photo1.jpg"
                 alt="Programista pisze kod programu."
-                width="370"
-                height="294"
+                src="./images/gallery/gallery_photo1-370.jpg"
+                srcset="
+                  ./images/gallery/gallery_photo1-370.jpg 370w,
+                  ./images/gallery/gallery_photo1-740.jpg 740w
+                "
               />
               <div class="gallery-list__label">
                 <p class="gallery-list__caption">APLIKACJE KOMPUTEROWE</p>
@@ -159,10 +187,12 @@
             <li class="gallery-list__item">
               <img
                 class="gallery-list__img"
-                src="images/gallery/gallery_photo2.jpg"
                 alt="Designer projektuje UI telefonu na laptopie."
-                width="370"
-                height="294"
+                src="./images/gallery/gallery_photo2-370.jpg"
+                srcset="
+                  ./images/gallery/gallery_photo2-370.jpg 370w,
+                  ./images/gallery/gallery_photo2-740.jpg 740w
+                "
               />
               <div class="gallery-list__label">
                 <p class="gallery-list__caption">APLIKACJE MOBILNE</p>
@@ -171,10 +201,12 @@
             <li class="gallery-list__item">
               <img
                 class="gallery-list__img"
-                src="images/gallery/gallery_photo3.jpg"
                 alt="Designer wybiera kolory z palety kolorów na tablecie."
-                width="370"
-                height="294"
+                src="./images/gallery/gallery_photo3-370.jpg"
+                srcset="
+                  ./images/gallery/gallery_photo3-370.jpg 370w,
+                  ./images/gallery/gallery_photo3-740.jpg 740w
+                "
               />
               <div class="gallery-list__label">
                 <p class="gallery-list__caption">ROZWIĄZANIA GRAFICZNE</p>
@@ -190,10 +222,16 @@
           <ul class="team-section__employee-list employee-list">
             <li class="employee-list__member">
               <img
-                src="images/workers/worker_photo1.jpg"
                 alt="Portret Johna Doe"
-                width="270"
-                height="260"
+                src="./images/workers/worker_photo1-270.jpg"
+                srcset="
+                  ./images/workers/worker_photo1-270.jpg 270w,
+                  ./images/workers/worker_photo1-354.jpg 354w,
+                  ./images/workers/worker_photo1-450.jpg 450w,
+                  ./images/workers/worker_photo1-540.jpg 540w,
+                  ./images/workers/worker_photo1-708.jpg 708w,
+                  ./images/workers/worker_photo1-900.jpg 900w
+                "
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Product Designer</p>
@@ -262,10 +300,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="images/workers/worker_photo2.jpg"
                 alt="Portret Johna Doe"
-                width="270"
-                height="260"
+                src="./images/workers/worker_photo2-270.jpg"
+                srcset="
+                  ./images/workers/worker_photo2-270.jpg 270w,
+                  ./images/workers/worker_photo2-354.jpg 354w,
+                  ./images/workers/worker_photo2-450.jpg 450w,
+                  ./images/workers/worker_photo2-540.jpg 540w,
+                  ./images/workers/worker_photo2-708.jpg 708w,
+                  ./images/workers/worker_photo2-900.jpg 900w
+                "
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Frontend Developer</p>
@@ -334,10 +378,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="images/workers/worker_photo3.jpg"
                 alt="Portret Johna Doe"
-                width="270"
-                height="260"
+                src="./images/workers/worker_photo3-270.jpg"
+                srcset="
+                  ./images/workers/worker_photo3-270.jpg 270w,
+                  ./images/workers/worker_photo3-354.jpg 354w,
+                  ./images/workers/worker_photo3-450.jpg 450w,
+                  ./images/workers/worker_photo3-540.jpg 540w,
+                  ./images/workers/worker_photo3-708.jpg 708w,
+                  ./images/workers/worker_photo3-900.jpg 900w
+                "
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Marketing</p>
@@ -406,10 +456,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="images/workers/worker_photo4.jpg"
                 alt="Portret Johna Doe"
-                width="270"
-                height="260"
+                src="./images/workers/worker_photo4-270.jpg"
+                srcset="
+                  ./images/workers/worker_photo4-270.jpg 270w,
+                  ./images/workers/worker_photo4-354.jpg 354w,
+                  ./images/workers/worker_photo4-450.jpg 450w,
+                  ./images/workers/worker_photo4-540.jpg 540w,
+                  ./images/workers/worker_photo4-708.jpg 708w,
+                  ./images/workers/worker_photo4-900.jpg 900w
+                "
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">UI Designer</p>
@@ -647,7 +703,7 @@
             </ul>
           </div>
           <div class="main-footer__newsletter newsletter">
-            <form name="newsletter">
+            <form name="newsletter" class="newsletter__form">
               <label class="newsletter__label" for="newsletter-email"
                 >Zapisz się do newslettera
               </label>
@@ -669,6 +725,73 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-container__close-button js-close-menu">
+        <svg width="18" height="18">
+          <line
+            x1="0"
+            y1="0"
+            x2="18"
+            y2="18"
+            stroke="#2a2a2a"
+            stroke-width="3"
+          />
+          <line
+            x1="0"
+            y1="18"
+            x2="18"
+            y2="0"
+            stroke="#2a2a2a"
+            stroke-width="3"
+          />
+        </svg>
+      </button>
+      <ul class="menu-container__navigation">
+        <li class="menu-container__navigation-item">
+          <a class="menu-container__link" href="index.html#agency">Agencja</a>
+        </li>
+        <li class="menu-container__navigation-item">
+          <a class="menu-container__link" href="portfolio.html#portfolio"
+            >Portfolio</a
+          >
+        </li>
+        <li class="menu-container__navigation-item">
+          <a class="menu-container__link" href="#contact">Kontakt</a>
+        </li>
+      </ul>
+      <div class="menu-container__contacts-container">
+        <ul class="menu-container__contacts-list">
+          <li class="menu-container__contact">
+            <a class="menu-container__tel-link" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li class="menu-container__contact">
+            <a
+              class="menu-container__mail-link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-container__social-links-list">
+          <li class="menu-container__social-item">
+            <a class="menu-container__social-link" href="#">Instagram</a>
+          </li>
+          <li class="menu-container__social-item">
+            <a class="menu-container__social-link" href="#">Twitter</a>
+          </li>
+          <li class="menu-container__social-item">
+            <a class="menu-container__social-link" href="#">Facebook</a>
+          </li>
+          <li class="menu-container__social-item">
+            <a class="menu-container__social-link" href="#">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-button" data-modal-close>
@@ -771,6 +894,14 @@
         </div>
       </div>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

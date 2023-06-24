@@ -1,6 +1,10 @@
-@import "../utils/vars";
-
 .gallery-section {
+  display: none;
+
+  @include desktop {
+    display: contents;
+  }
+
   &__headline {
     font-size: 36px;
     line-height: 1.31;

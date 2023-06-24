@@ -1,15 +1,23 @@
-@import "../utils/vars";
-
 .main-footer {
   background: $header-background-color;
   &__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 60px 0;
-    align-items: flex-start;
   }
   &__contact {
-    display: inline-block;
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      margin-right: 144px;
+    }
+
+    @include desktop {
+      margin-right: 70px;
+    }
   }
   &__webstudio-link {
     font-family: $logo-font;
@@ -24,13 +32,18 @@
   }
 }
 .address {
+  margin-bottom: 60px;
   &__list {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__item {
+    width: max-content;
     margin-bottom: 9px;
     &:nth-child(3) {
       margin-bottom: 0;
@@ -45,22 +58,26 @@
   }
 }
 .social-icons {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 206px;
   height: 80px;
+  margin-bottom: 60px;
   &__headline {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.03em;
-    text-align: left;
     margin-top: 0;
     margin-bottom: 20px;
+    width: max-content;
   }
   &__links {
     display: flex;
     justify-content: space-between;
+    width: 206px;
   }
   &__border {
     background-color: $footer-socials-background-color;
@@ -78,9 +95,13 @@
   }
 }
 .newsletter {
-  padding-left: 78px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__label {
-    display: block;
     margin-bottom: 20px;
     font-family: "Roboto";
     font-style: normal;
@@ -90,16 +111,19 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #fff;
+    width: max-content;
   }
   &__email-input {
     border: $clients-icon-background-active;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     height: 50px;
-    width: 358px;
+    width: 90vw;
     background-color: transparent;
     color: #fff;
     outline: none;
+    margin-bottom: 20px;
+
     &:placeholder-shown {
       border-color: $newsletter-border-color;
     }
