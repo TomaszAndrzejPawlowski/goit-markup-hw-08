@@ -5,6 +5,22 @@
     flex-direction: column;
     align-items: center;
     padding: 60px 0;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding: 60px 0 0;
+    }
   }
   &__contact {
     display: flex;
@@ -16,6 +32,8 @@
     }
 
     @include desktop {
+      flex-direction: column;
+      align-items: flex-start;
       margin-right: 70px;
     }
   }
@@ -41,6 +59,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include desktop {
+      align-items: flex-start;
+    }
   }
   &__item {
     width: max-content;
@@ -64,6 +86,12 @@
   width: 206px;
   height: 80px;
   margin-bottom: 60px;
+
+  @include desktop {
+    align-items: flex-start;
+    margin-right: 60px;
+  }
+
   &__headline {
     color: #fff;
     font-size: 14px;
@@ -99,6 +127,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include desktop {
+      display: inline;
+    }
   }
 
   &__label {
@@ -112,6 +144,10 @@
     text-transform: uppercase;
     color: #fff;
     width: max-content;
+
+    @include desktop {
+      display: block;
+    }
   }
   &__email-input {
     border: $clients-icon-background-active;
@@ -130,20 +166,24 @@
     &[placeholder] {
       padding-left: 16px;
     }
+    @include tablet {
+      width: 60vw;
+    }
+
+    @include desktop {
+      width: 350px;
+    }
   }
   &__button {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: #fff;
     background-color: $primary-color;
-    text-align: center;
     border-radius: 4px;
-    height: 50px;
+    height: 52px;
     width: 200px;
   }
   &__icon {

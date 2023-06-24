@@ -1,10 +1,14 @@
-@import "../utils/vars";
-
 .portfolio-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: 94px;
   margin-bottom: 50px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
   &__button {
     font-family: "Roboto";
     font-style: normal;
@@ -15,10 +19,17 @@
     letter-spacing: 0.03em;
     background-color: $portfolio-buttons-color;
     border: 0;
-    margin-right: 8px;
-    padding: 6px 22px;
-    &:nth-child(5) {
+    margin: 0 8px 15px 0;
+    padding: 6px 0;
+    width: 120px;
+    &:nth-child(n + 4) {
       margin: 0;
+    }
+    @include tablet {
+      margin: 0 8px 0 0;
+      &:nth-child(5) {
+        margin: 0;
+      }
     }
     &:hover,
     &:focus {
