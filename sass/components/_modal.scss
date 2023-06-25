@@ -100,15 +100,19 @@
   }
   &__icon {
     fill: $primary-text-color;
-    margin: auto;
+    margin: auto 15px;
   }
 
   &__input {
     margin: 10px auto 10px 0;
-    width: 366px;
+    width: 300px;
     height: 20px;
     border: none;
     outline-color: $forms-inputs-outline-colors;
+
+    @include desktop {
+      width: 366px;
+    }
   }
   &__textarea-label {
     @extend .form__label;
@@ -132,7 +136,7 @@
   &__textarea-input {
     resize: none;
     margin: 12px auto;
-    width: 416px;
+    width: 340px;
     border: none;
     outline-color: $forms-inputs-outline-colors;
     &::placeholder {
@@ -142,6 +146,10 @@
       line-height: 14px;
       letter-spacing: 0.01em;
       color: $textarea-placeholder-color;
+    }
+
+    @include desktop {
+      width: 416px;
     }
   }
   &__declaration-label {
